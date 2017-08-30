@@ -18,4 +18,5 @@
     <string name="adidas" translatable="false">Adidas</string>
     <string name="puma" translatable="false">Puma</string>
     <string name="comprar">Comprar</string>
+    <string name="error_empty">Debe digitar una cantidad</string>
 </resources>

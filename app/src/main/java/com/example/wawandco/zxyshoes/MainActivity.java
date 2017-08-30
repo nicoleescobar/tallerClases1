@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     boolean isSneaker = true;
     boolean isClasic = false;
 
-    double total = 0;
+    int total = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,74 +58,77 @@ public class MainActivity extends AppCompatActivity {
         String strNike = resources.getString(R.string.nike);
         String strPuma = resources.getString(R.string.puma);
 
+        if (validar()) {
 
-        shoe = shoesList.getSelectedItem().toString();
 
-        if (isMan){
-            if(isSneaker) {
-                if(shoe.equals(strAdidas)){
-                    total = 140.000;
+            shoe = shoesList.getSelectedItem().toString();
+
+            if (isMan) {
+                if (isSneaker) {
+                    if (shoe.equals(strAdidas)) {
+                        total = 140000;
+                    }
+
+                    if (shoe.equals(strPuma)) {
+                        total = 130000;
+                    }
+
+                    if (shoe.equals(strNike)) {
+                        total = 120000;
+                    }
                 }
 
-                if(shoe.equals(strPuma)){
-                    total = 130.000;
-                }
+                if (isClasic) {
+                    if (shoe.equals(strAdidas)) {
+                        total = 80000;
+                    }
 
-                if(shoe.equals(strNike)){
-                    total = 120.000;
+                    if (shoe.equals(strPuma)) {
+                        total = 100000;
+                    }
+
+                    if (shoe.equals(strNike)) {
+                        total = 50000;
+                    }
                 }
             }
 
-            if(isClasic) {
-                if(shoe.equals(strAdidas)){
-                    total = 80.000;
+            if (isWoman) {
+                if (isSneaker) {
+                    if (shoe.equals(strAdidas)) {
+                        total = 130000;
+                    }
+
+                    if (shoe.equals(strPuma)) {
+                        total = 100000;
+                    }
+
+                    if (shoe.equals(strNike)) {
+                        total = 100000;
+                    }
                 }
 
-                if(shoe.equals(strPuma)){
-                    total = 100.000;
-                }
+                if (isClasic) {
+                    if (shoe.equals(strAdidas)) {
+                        total = 70000;
+                    }
 
-                if(shoe.equals(strNike)){
-                    total = 50.000;
+                    if (shoe.equals(strPuma)) {
+                        total = 120000;
+                    }
+
+                    if (shoe.equals(strNike)) {
+                        total = 60000;
+                    }
                 }
             }
+
+            total = total * Integer.parseInt(cantidad.getText().toString());
+
+
+            messageTotal.setText(resources.getString(R.string.messageTotalCost));
+            totalbox.setText("" + total);
         }
-
-        if (isWoman){
-            if(isSneaker) {
-                if(shoe.equals(strAdidas)){
-                    total = 130.000;
-                }
-
-                if(shoe.equals(strPuma)){
-                    total = 100.000;
-                }
-
-                if(shoe.equals(strNike)){
-                    total = 100.000;
-                }
-            }
-
-            if(isClasic) {
-                if(shoe.equals(strAdidas)){
-                    total = 70.000;
-                }
-
-                if(shoe.equals(strPuma)){
-                    total = 120.000;
-                }
-
-                if(shoe.equals(strNike)){
-                    total = 60.000;
-                }
-            }
-        }
-
-        total = total *  Integer.parseInt(cantidad.getText().toString());
-
-
-        messageTotal.setText(resources.getString(R.string.messageTotalCost));
-        totalbox.setText((int) total);
 
     }
 
@@ -162,5 +165,15 @@ public class MainActivity extends AppCompatActivity {
                     isClasic = false;
                 break;
         }
+    }
+
+    public boolean validar(){
+
+        if(cantidad.getText().toString().isEmpty()){
+            cantidad.setError(resources.getString(R.string.error_empty));
+            return false;
+        }
+
+        return true;
     }
 }
