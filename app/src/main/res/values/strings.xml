@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ZXYzapatos</string>
+    <string name="title">XYZ Zapatos</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="type">Tipo de Zapato</string>
+    <string name="zapatilla">Zapatilla</string>
+    <string name="brand">Marca</string>
+    <string name="clasico">Clasico</string>
+    <string name="cantidad">Cantidad a comprar</string>
+    <string name="messageTotalCost">El monto total a pagar es: $</string>
+    <string-array name="tipos">
+        <item>@string/nike</item>
+        <item>@string/adidas</item>
+        <item>@string/puma</item>
+    </string-array>
+    <string name="nike" translatable="false">Nike</string>
+    <string name="adidas" translatable="false">Adidas</string>
+    <string name="puma" translatable="false">Puma</string>
+    <string name="comprar">Comprar</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ZXYshoes</string>
+    <string name="hombre">Man</string>
+    <string name="mujer">Woman</string>
+    <string name="title">XYZ Shoes</string>
+    <string name="clasico">Clasic</string>
+    <string name="type">Shoe Type</string>
+    <string name="zapatilla">"Sneakers "</string>
+    <string name="brand">Brand</string>
+    <string name="cantidad">Number of Shoes</string>
+    <string name="comprar">Buy</string>
+    <string name="messageTotalCost">Total purchase is: $</string>
+</resources>
