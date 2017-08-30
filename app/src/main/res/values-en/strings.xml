@@ -10,6 +10,6 @@
     <string name="brand">Brand</string>
     <string name="cantidad">Number of Shoes</string>
     <string name="comprar">Buy</string>
-    <string name="messageTotalCost">Total purchase is: $</string>
+    <string name="messageTotalCost">Total Purchase</string>
     <string name="error_empty">"quantity invalid "</string>
 </resources>

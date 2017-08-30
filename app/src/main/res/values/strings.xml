@@ -8,7 +8,7 @@
     <string name="brand">Marca</string>
     <string name="clasico">Clasico</string>
     <string name="cantidad">Cantidad a comprar</string>
-    <string name="messageTotalCost">El monto total a pagar es: $</string>
+    <string name="messageTotalCost">Total</string>
     <string-array name="tipos">
         <item>@string/nike</item>
         <item>@string/adidas</item>

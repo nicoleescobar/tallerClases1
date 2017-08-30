@@ -58,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
         String strNike = resources.getString(R.string.nike);
         String strPuma = resources.getString(R.string.puma);
 
+        messageTotal.setText(" ");
+        totalbox.setText(" ");
+        total = 0;
+
         if (validar()) {
 
 
@@ -127,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             messageTotal.setText(resources.getString(R.string.messageTotalCost));
-            totalbox.setText("" + total);
+            totalbox.setText("$" + total);
         }
 
     }
