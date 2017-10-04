@@ -66,70 +66,9 @@ public class MainActivity extends AppCompatActivity {
 
 
             shoe = shoesList.getSelectedItem().toString();
+            int cant = Integer.parseInt(cantidad.getText().toString());
 
-            if (isMan) {
-                if (isSneaker) {
-                    if (shoe.equals(strAdidas)) {
-                        total = 140000;
-                    }
-
-                    if (shoe.equals(strPuma)) {
-                        total = 130000;
-                    }
-
-                    if (shoe.equals(strNike)) {
-                        total = 120000;
-                    }
-                }
-
-                if (isClasic) {
-                    if (shoe.equals(strAdidas)) {
-                        total = 80000;
-                    }
-
-                    if (shoe.equals(strPuma)) {
-                        total = 100000;
-                    }
-
-                    if (shoe.equals(strNike)) {
-                        total = 50000;
-                    }
-                }
-            }
-
-            if (isWoman) {
-                if (isSneaker) {
-                    if (shoe.equals(strAdidas)) {
-                        total = 130000;
-                    }
-
-                    if (shoe.equals(strPuma)) {
-                        total = 100000;
-                    }
-
-                    if (shoe.equals(strNike)) {
-                        total = 100000;
-                    }
-                }
-
-                if (isClasic) {
-                    if (shoe.equals(strAdidas)) {
-                        total = 70000;
-                    }
-
-                    if (shoe.equals(strPuma)) {
-                        total = 120000;
-                    }
-
-                    if (shoe.equals(strNike)) {
-                        total = 60000;
-                    }
-                }
-            }
-
-            total = total * Integer.parseInt(cantidad.getText().toString());
-
-
+            total = Metodos.total(cant, isMan, isWoman, isSneaker, isClasic, shoe);
             messageTotal.setText(resources.getString(R.string.messageTotalCost));
             totalbox.setText("$" + total);
         }
